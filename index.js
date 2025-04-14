@@ -26,7 +26,7 @@ function draw() {
     textSize(16);
     textAlign(CENTER);
     text("Erkannt: " + label, width / 2, 270); 
-
+}
     drawBoard(); 
 
 function classifyVideo() {
@@ -36,7 +36,7 @@ function classifyVideo() {
 function gotResult(results) {
     console.log(results);
     label = results[0].label; 
-
+}
     
     if ((label === 'X' || label === 'O') && board[currentIndex] === '') {
         board[currentIndex] = label;
@@ -57,7 +57,7 @@ function keyPressed() {
     }
     if (key === 'ArrowDown') {
         currentIndex = (currentIndex + 3) % 9; 
-}
+}}
 
 function drawBoard() {
     let size = 100; 
@@ -83,3 +83,5 @@ function drawBoard() {
         }
     }
 }
+
+//test
